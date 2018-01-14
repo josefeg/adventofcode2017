@@ -90,7 +90,7 @@ def manhattan_distance(location: int) -> int:
     return abs(x) + abs(y)
 
 
-def neighbours_of(x: int, y: int, square_size: int) -> list:
+def neighbours_of(x: int, y: int) -> list:
     neighbours = []
     for delta_x in range(-1, 2):
         for delta_y in range(-1, 2):
@@ -114,7 +114,7 @@ def next_value_after(value: int) -> int:
             x_delta, y_delta = get_next_direction(x, y, square_size)
             x += x_delta
             y += y_delta
-        neighbours = neighbours_of(x, y, square_size)
+        neighbours = neighbours_of(x, y)
         current_value = 0
         for neighbour in neighbours:
             if neighbour in square:
