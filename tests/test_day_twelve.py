@@ -12,7 +12,7 @@ def test_one():
         "6 <-> 4, 5",
     ]
     network = day_twelve.build_network(lines)
-    connected = day_twelve.b.find_connected_to(network, "0")
+    connected = day_twelve.find_connected_to(network, "0")
     assert len(connected) == 6
 
 
